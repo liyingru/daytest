@@ -1,0 +1,113 @@
+@import "_minix.scss";
+@import "common.scss";
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), url('iconfont.woff') format('woff'), url('iconfont.ttf') format('truetype'), url('iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    @include box_flex;
+    @include direction(column);
+    background: #F1F0F0;
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    @include box_flex;
+    @include justify(space-around);
+    @include align;
+    span.iconfont {
+        font-size: pxTorem(25px);
+        color: #B5B5B5;
+    }
+}
+
+section {
+    width: 100%;
+    @include box_flex;
+    @include direction(column);
+    .box {
+        width: 100%;
+        @include box_flex;
+        height: pxTorem(120px);
+        @include align;
+        @include justify(space-around);
+        dl {
+            dt {
+                button {
+                    width: pxTorem(50px);
+                    height: pxTorem(50px);
+                    border-radius: 50%;
+                    border: 1px solid #ccc;
+                    background: #F1F0F0;
+                }
+                button.iconfont {
+                    font-size: pxTorem(25px);
+                    color: #B5B5B5;
+                }
+            }
+            dd {
+                padding: pxTorem(10px) 0;
+                text-align: center;
+            }
+        }
+    }
+    .box2 {
+        @include box_flex;
+        width: 100%;
+        height: pxTorem(300px);
+        @include align;
+        @include justify(center);
+        @include direction(column);
+        color: #666;
+    }
+    .box3 {
+        @include box_flex;
+        width: 100%;
+        height: pxTorem(100px);
+        button {
+            margin: 0 pxTorem(15px);
+            &:nth-child(1) {
+                width: pxTorem(50px);
+                height: pxTorem(50px);
+                border-radius: 50%;
+                border: 1px solid #ccc;
+                background: #F1F0F0;
+            }
+            &:nth-child(2) {
+                width: pxTorem(170px);
+                height: pxTorem(40px);
+                border-radius: 25%;
+                border: 1px solid #ccc;
+                background: #F1F0F0;
+            }
+        }
+        button.iconfont {
+            font-size: pxTorem(25px);
+            color: #B5B5B5;
+        }
+    }
+}
